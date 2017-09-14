@@ -1,7 +1,6 @@
 Annotations Processing
 https://medium.com/android-dev-br/annotation-processing-no-android-d28b734b8043
 https://medium.com/@iammert/annotation-processing-dont-repeat-yourself-generate-your-code-8425e60c6657
-https://medium.com/android-dev-br/annotation-processing-no-android-d28b734b8043
 
 
 Sobre annotation
@@ -11,3 +10,8 @@ https://stackoverflow.com/questions/15101139/how-targetelementtype-annotation-ty
 Annotation android
 https://developer.android.com/reference/android/support/annotation/package-summary.html
 https://developer.android.com/studio/write/annotations.html?hl=pt-br
+
+
+Simple
+https://github.com/erdemtopak/simple-annotation-processor
+https://blog.mindorks.com/creating-custom-annotations-in-android-a855c5b43ed9
