@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ViewModelArchitecture</string>
+    <string name="default_id_user">#1</string>
+    <string name="default_username">Icomon</string>
+</resources>
