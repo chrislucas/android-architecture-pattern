@@ -2,4 +2,6 @@
     <string name="app_name">ViewModelArchitecture</string>
     <string name="default_id_user">#1</string>
     <string name="default_username">Icomon</string>
+    <string name="livedata_location">LiveData com LocationManager</string>
+    <string name="title_chronometer_2">LiveData Cronometro 2</string>
 </resources>

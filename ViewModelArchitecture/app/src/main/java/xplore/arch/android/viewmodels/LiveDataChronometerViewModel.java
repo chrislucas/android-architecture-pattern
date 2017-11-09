@@ -36,7 +36,6 @@ public class LiveDataChronometerViewModel extends ViewModel {
         };
         timer.scheduleAtFixedRate(timerTask, DELAY_MS, DELAY_MS);
     }
-
     /**
      * Retorna o dado encapsulado
      * */

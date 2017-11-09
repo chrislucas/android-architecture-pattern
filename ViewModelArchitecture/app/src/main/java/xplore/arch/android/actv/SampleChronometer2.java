@@ -26,7 +26,6 @@ public class SampleChronometer2 extends AppCompatActivity {
         liveDataChronometerViewModel = ViewModelProviders
                 .of(this)
                 .get(LiveDataChronometerViewModel.class);
-
         /**
          * Temos um observador na activity que verifica quando um valor do tipo
          * long muda. Nesse exemplo esse observador fica observando o timer da
