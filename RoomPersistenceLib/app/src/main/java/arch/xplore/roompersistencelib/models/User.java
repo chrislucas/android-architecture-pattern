@@ -5,6 +5,8 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.PrimaryKey;
 
+import java.util.Locale;
+
 import arch.xplore.roompersistencelib.enums.TypeUser;
 
 /**
@@ -71,5 +73,10 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return String.format(Locale.getDefault(), "Nome: %s Registro: %s", name, register);
     }
 }

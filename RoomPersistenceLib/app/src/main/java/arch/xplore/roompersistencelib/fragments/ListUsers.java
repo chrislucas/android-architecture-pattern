@@ -4,11 +4,19 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.List;
+
 import arch.xplore.roompersistencelib.R;
+import arch.xplore.roompersistencelib.models.User;
+import arch.xplore.roompersistencelib.utils.MyDatabaseBuilder;
+import arch.xplore.roompersistencelib.viewholders.ViewHolderUser;
+import arch.xplore.roompersistencelib.viewholders.recycleviewadapter.RecycleViewAdapterUser;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -21,6 +29,8 @@ import arch.xplore.roompersistencelib.R;
 public class ListUsers extends Fragment {
 
     private OnFragmentInteractionListener mListener;
+    private MyDatabaseBuilder myDatabaseBuilder;
+    private RecyclerView recyclerViewUsers;
 
     public ListUsers() {
         // Required empty public constructor
@@ -33,22 +43,29 @@ public class ListUsers extends Fragment {
      */
     // TODO: Rename and change types and number of parameters
     public static ListUsers newInstance() {
-        ListUsers fragment = new ListUsers();
-        return fragment;
+        return new ListUsers();
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-        }
+        if (getArguments() != null) {}
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_list_users, container, false);
+        View layout = inflater.inflate(R.layout.fragment_list_users, container, false);
+        recyclerViewUsers = layout.findViewById(R.id.list_user);
+        Context context = getActivity().getApplicationContext();
+        if(context != null) {
+            myDatabaseBuilder = MyDatabaseBuilder.getInstance(context);
+            List<User> users = myDatabaseBuilder.getDatabaseApp().userDao().getAll();
+            RecyclerView.Adapter<ViewHolderUser> adapter = new RecycleViewAdapterUser(users);
+            recyclerViewUsers.setLayoutManager(new LinearLayoutManager(context));
+            recyclerViewUsers.setAdapter(adapter);
+        }
+        return layout;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -86,4 +103,6 @@ public class ListUsers extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
+
 }

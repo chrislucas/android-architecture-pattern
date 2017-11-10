@@ -6,6 +6,10 @@
     <string name="hint_user_register">r028367</string>
     <string name="hint_user_name">Chris Lucas</string>
     <string name="save">Salvar</string>
+    <string name="label_id_user">Id</string>
+    <string name="user_register">Registro</string>
+    <string name="default_user_register">r000000</string>
+    <string name="default_user_id">0</string>
 
     <string-array name="type_user">
         <item>Técnico</item>
