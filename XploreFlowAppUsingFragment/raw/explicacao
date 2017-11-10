@@ -1,0 +1,16 @@
+Esse eh um projeto para explorar melhor a navegacao entre Fragments num app
+
+Pretendo explorar metodos como popBackStack
+
+Essa aplicacao inicia numa activity e o usuario pode acessar fragments atraves de botoes. Quero
+saber como fazer para o usuario ficar indo e voltado entre fragments e activites, principalmente quando
+ele pressiona o o botao back
+
+
+Alguns discussoes sobre quando usar fragment e quando usar activities
+
+https://www.reddit.com/r/androiddev/comments/2r1wcw/fragments_vs_activities/
+https://stackoverflow.com/questions/20306091/dilemma-when-to-use-fragments-vs-activities
+https://stackoverflow.com/questions/12978141/how-to-choose-activity-or-fragment-if-both-scenarios-are-possible
+https://stackoverflow.com/questions/18885311/use-activity-or-fragment-in-android-application
+https://stackoverflow.com/questions/10863572/programmatically-go-back-to-the-previous-fragment-in-the-backstack

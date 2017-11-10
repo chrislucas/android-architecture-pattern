@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/canvas"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="arch.xplore.roompersistencelib.activities.MainActivity">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.GridLayout
+            app:columnCount="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+            <Button
+                android:id="@+id/insert_button"
+                app:layout_row="0"
+                app:layout_column="0"
+                android:layout_height="match_parent"
+                android:layout_width="0sp"
+                app:layout_columnWeight="5"
+                android:text="@string/label_insert_button"
+                android:onClick="onClick"
+                />
+            <Button
+                android:id="@+id/select_users_button"
+                app:layout_row="0"
+                app:layout_column="1"
+                android:layout_height="match_parent"
+                android:layout_width="0sp"
+                app:layout_columnWeight="5"
+                android:text="@string/label_select_users_button"
+                android:onClick="onClick"
+                />
+        </android.support.v7.widget.GridLayout>
+    </FrameLayout>
+</LinearLayout>
