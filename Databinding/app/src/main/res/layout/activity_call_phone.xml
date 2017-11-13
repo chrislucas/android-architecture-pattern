@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="br.com.xplore.databinding.activities.CallPhone">
+
+    <Button
+        android:id="@+id/simple_open_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/open_phone"
+        android:onClick="openPhone"
+        />
+
+
+    <Button
+        android:id="@+id/simple_call_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/make_call"
+        android:onClick="makeCall"
+        />
+
+</LinearLayout>

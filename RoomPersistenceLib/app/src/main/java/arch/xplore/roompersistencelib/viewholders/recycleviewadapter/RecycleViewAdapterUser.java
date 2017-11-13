@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Locale;
 
 import arch.xplore.roompersistencelib.R;
+import arch.xplore.roompersistencelib.enums.TypeUser;
 import arch.xplore.roompersistencelib.models.User;
 import arch.xplore.roompersistencelib.viewholders.ViewHolderUser;
 
@@ -41,6 +42,9 @@ public class RecycleViewAdapterUser extends RecyclerView.Adapter<ViewHolderUser>
         User user = users.get(position);
         holder.getUserId().setText(String.valueOf(user.getId()));
         holder.getUserRegister().setText(user.getRegister());
+        holder.getUserName().setText(user.getName());
+        String description = user.getTypeUser().toString();
+        holder.getTypeUser().setText(description);
     }
 
     @Override

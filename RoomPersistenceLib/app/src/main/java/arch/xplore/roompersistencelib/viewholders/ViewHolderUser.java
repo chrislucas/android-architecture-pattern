@@ -19,6 +19,8 @@ public class ViewHolderUser extends RecyclerView.ViewHolder {
         super(itemView);
         userId = itemView.findViewById(R.id.user_id);
         userRegister = itemView.findViewById(R.id.user_register);
+        userName = itemView.findViewById(R.id.user_name);
+        typeUser = itemView.findViewById(R.id.type_user);
     }
 
     public TextView getUserId() {

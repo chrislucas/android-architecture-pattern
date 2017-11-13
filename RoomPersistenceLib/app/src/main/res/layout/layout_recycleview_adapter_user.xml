@@ -21,7 +21,6 @@
         android:orientation="vertical"
         android:useDefaultMargins="true">
 
-
         <TextView
             android:id="@+id/label_id_user"
             android:layout_row="0"
@@ -29,10 +28,8 @@
             android:text="@string/label_id_user"
             />
 
-
         <TextView
             android:id="@+id/user_id"
-
             android:layout_row="0"
             android:layout_column="1"
             android:text="@string/default_user_id"
@@ -50,6 +47,35 @@
             android:layout_row="1"
             android:layout_column="1"
             android:text="@string/default_user_register"
+            />
+
+        <TextView
+            android:id="@+id/label_user_name"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:text="@string/default_label_user_name"
+            />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:text="@string/default_username"
+            />
+
+        <TextView
+            android:id="@+id/label_type_user"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:text="@string/default_label_type_user"
+            />
+
+
+        <TextView
+            android:id="@+id/type_user"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:text="@string/default_type_user"
             />
 
     </GridLayout>

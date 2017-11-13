@@ -10,6 +10,10 @@
     <string name="user_register">Registro</string>
     <string name="default_user_register">r000000</string>
     <string name="default_user_id">0</string>
+    <string name="default_label_user_name">Nome</string>
+    <string name="default_username">Christoffer Lucas</string>
+    <string name="default_label_type_user">Cargo</string>
+    <string name="default_type_user">Técnico</string>
 
     <string-array name="type_user">
         <item>Técnico</item>
