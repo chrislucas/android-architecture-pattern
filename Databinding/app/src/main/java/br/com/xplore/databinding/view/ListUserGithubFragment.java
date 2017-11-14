@@ -64,14 +64,11 @@ public class ListUserGithubFragment extends Fragment {
         RecyclerView recyclerView = view.findViewById(R.id.list_user_github);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-
         List<User> users = new ArrayList<>();
-
         users.add(new User("Christoffer"));
         users.add(new User("Lucas"));
-        users.add(new User("Airton"));
+        users.add(new User("Allyson"));
         users.add(new User("Jaime"));
-
 
         /**
          * Como usar o recycleview
@@ -85,13 +82,11 @@ public class ListUserGithubFragment extends Fragment {
          * a lista
          *
          * */
-
         RecyclerView.Adapter<ViewHolderUserGithub> adapter = new AdapterUserGithub(users);
         /*
         FragmentListUserGithubBinding fragmentListBinding = DataBindingUtil.inflate(getLayoutInflater()
                 ,  R.layout.fragment_list_user_github, container, false);
          */
-
         recyclerView.setAdapter(adapter);
         return view;
     }

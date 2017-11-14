@@ -39,7 +39,7 @@ public class AdapterUserGithub extends RecyclerView.Adapter<ViewHolderUserGithub
     public void onBindViewHolder(ViewHolderUserGithub holder, int position) {
         // usando o viewholder vinculado a esse adapter
         User user = users.get(position);
-        holder.getName().setText(user.getName());
+        holder.bind(user);
     }
 
     @Override
