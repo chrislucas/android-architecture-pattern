@@ -11,13 +11,17 @@ import br.com.xplore.databinding.R;
  * Created by r028367 on 13/11/2017.
  */
 
-public class ViewHolderUsergithub extends RecyclerView.ViewHolder {
+public class ViewHolderUserGithub extends RecyclerView.ViewHolder {
 
     private ViewDataBinding viewDataBinding;
     private TextView name;
 
-    public ViewHolderUsergithub(ViewDataBinding viewDataBinding) {
+    /**
+     * Constructor
+     * */
+    public ViewHolderUserGithub(ViewDataBinding viewDataBinding) {
         super(viewDataBinding.getRoot());
+        this.viewDataBinding = viewDataBinding;
         View viewRoot = viewDataBinding.getRoot();
         name = viewRoot.findViewById(R.id.github_username);
     }

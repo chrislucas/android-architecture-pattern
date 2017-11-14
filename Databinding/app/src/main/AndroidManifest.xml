@@ -3,7 +3,7 @@
     package="br.com.xplore.databinding">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
 
     <application
         android:allowBackup="true"
@@ -13,12 +13,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".activities.MainActivity">
+        </activity>
+        <activity android:name=".activities.CallPhone" />
+        <activity android:name=".activities.HandlerEventUsingDatabinding">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.CallPhone" />
         <receiver
             android:name=".broadcast.FilterAll"
             android:enabled="true"

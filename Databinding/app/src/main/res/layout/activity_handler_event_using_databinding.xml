@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="message"
+            type="String"
+            />
+        <variable
+            name="implEvents"
+            type="br.com.xplore.databinding.events.ImplEventsActivityHandlerEventUsingDatabinding"
+            />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:text="@string/using_databinding_call_method"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:onClick="@{() -> implEvents.onPassData(message)}"
+            />
+    </LinearLayout>
+
+</layout>

@@ -7,4 +7,5 @@
     <string name="open_phone">Abrir o Telefone</string>
     <string name="make_call">Ligar para um número</string>
     <string name="default_label_name">Nome</string>
+    <string name="using_databinding_call_method">Usando Databinding para chamar um método</string>
 </resources>

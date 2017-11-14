@@ -1,4 +1,4 @@
-package br.com.xplore.databinding;
+package br.com.xplore.databinding.http;
 
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;

@@ -2,7 +2,6 @@ package br.com.xplore.databinding.view;
 
 import android.content.Context;
 import android.databinding.DataBindingUtil;
-import android.databinding.ViewDataBinding;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -12,11 +11,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import br.com.xplore.databinding.R;
 import br.com.xplore.databinding.adapter.AdapterUserGithub;
-import br.com.xplore.databinding.adapter.holder.ViewHolderUsergithub;
+import br.com.xplore.databinding.adapter.holder.ViewHolderUserGithub;
 import br.com.xplore.databinding.databinding.FragmentListUserGithubBinding;
 import br.com.xplore.databinding.model.User;
 
@@ -65,19 +65,34 @@ public class ListUserGithubFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
 
-        List<User> users = null;
+        List<User> users = new ArrayList<>();
+
+        users.add(new User("Christoffer"));
+        users.add(new User("Lucas"));
+        users.add(new User("Airton"));
+        users.add(new User("Jaime"));
 
 
-        RecyclerView.Adapter<ViewHolderUsergithub> adapter = new AdapterUserGithub(users);
+        /**
+         * Como usar o recycleview
+         *
+         * Um RecycleView view depedente de um RecycleView.ViewHolder e de um RecycleView.Adapter
+         *
+         * a classe RecycleView.ViewHolder representa o layout com as views de cada item que
+         * da RecycleView e a classe ecycleView.Adapter contém a lista que irá preencher
+         * a RecycleView. Assim, a classe Adapter faz o vinculo(bind) entre a RecycleView e a ViewHolder
+         * para cada elemento na lista da classe Adapter uma ViewHolder sera instanciada para preencher
+         * a lista
+         *
+         * */
 
+        RecyclerView.Adapter<ViewHolderUserGithub> adapter = new AdapterUserGithub(users);
+        /*
         FragmentListUserGithubBinding fragmentListBinding = DataBindingUtil.inflate(getLayoutInflater()
                 ,  R.layout.fragment_list_user_github, container, false);
-
-
-        RecyclerView.ViewHolder viewHolder = new ViewHolderUsergithub(fragmentListBinding);
+         */
 
         recyclerView.setAdapter(adapter);
-
         return view;
     }
 
