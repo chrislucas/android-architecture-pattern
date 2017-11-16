@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.lang.ref.WeakReference;
 import java.lang.reflect.Type;
 import java.util.Locale;
 
@@ -66,7 +67,6 @@ public class InsertUser extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View layout = inflater.inflate(R.layout.fragment_insert_user, container, false);
-
         /**
          * Para esse exemplo nao vou usar databinding e pronto !!! Estou estudando Room Persistence Library
          * nao me julguem ><
@@ -95,7 +95,8 @@ public class InsertUser extends Fragment {
         });
         Context context = getActivity().getApplicationContext();
         if(context != null) {
-            myDatabaseBuilder = MyDatabaseBuilder.getInstance(getContext());
+            WeakReference<Context> weakReference = new WeakReference<Context>(getContext());
+            myDatabaseBuilder = MyDatabaseBuilder.getInstance(weakReference);
         }
         return layout;
     }

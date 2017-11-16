@@ -28,4 +28,6 @@ public interface UserDao {
     @Delete
     void delete(User user);
 
+    @Query("SELECT CAST(COUNT(users.id) AS BIT) FROM users")
+    boolean hasUsers();
 }

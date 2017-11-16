@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.lang.ref.WeakReference;
 import java.util.List;
 
 import arch.xplore.roompersistencelib.R;
@@ -59,7 +60,8 @@ public class ListUsers extends Fragment {
         recyclerViewUsers = layout.findViewById(R.id.list_user);
         Context context = getActivity().getApplicationContext();
         if(context != null) {
-            myDatabaseBuilder = MyDatabaseBuilder.getInstance(context);
+            WeakReference<Context> weakReference = new WeakReference<Context>(context);
+            myDatabaseBuilder = MyDatabaseBuilder.getInstance(weakReference);
             List<User> users = myDatabaseBuilder.getDatabaseApp().userDao().getAll();
             RecyclerView.Adapter<ViewHolderUser> adapter = new RecycleViewAdapterUser(users);
             recyclerViewUsers.setLayoutManager(new LinearLayoutManager(context));

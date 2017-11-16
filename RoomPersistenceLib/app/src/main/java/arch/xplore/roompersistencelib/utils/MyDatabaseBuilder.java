@@ -4,6 +4,8 @@ import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 
+import java.lang.ref.WeakReference;
+
 import arch.xplore.roompersistencelib.db.DatabaseApp;
 
 /**
@@ -21,12 +23,12 @@ public class MyDatabaseBuilder {
         return databaseApp;
     }
 
-    public synchronized static MyDatabaseBuilder getInstance(Context context) {
+    public synchronized static MyDatabaseBuilder getInstance(WeakReference<Context> weakReference) {
         if(instance == null) {
             instance = new MyDatabaseBuilder();
             // Isso parece ser sinixtro
             //instance.databaseApp =Room.inMemoryDatabaseBuilder(context, DatabaseApp.class).build();
-            RoomDatabase.Builder<DatabaseApp> db = Room.databaseBuilder(context
+            RoomDatabase.Builder<DatabaseApp> db = Room.databaseBuilder(weakReference.get()
                     , DatabaseApp.class, DatabaseApp.NAME);
             instance.databaseApp = db
                     .allowMainThreadQueries()
